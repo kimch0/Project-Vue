@@ -2,7 +2,7 @@
   <div class="mt-4 hello">
     <h2>Popular drinks</h2>
     <div class="row row-cols-auto">
-      <div class="col-4 g-4" v-for="(item, index) in cocktails" :key="index">
+      <div class="col-12 g-4 col-md-4" v-for="(item, index) in cocktails" :key="index">
         <div class="card bg-transparent border-0">
           <router-link
           id= "drinkInfo"
