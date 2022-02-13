@@ -1,37 +1,17 @@
 <template>
   <div>
-    <div class="row row-cols-auto">
-      <div class="col-3 g-4" v-for="(item, index) in cocktails" :key="index">
-        <div class="card bg-transparent border-0">
-          <router-link
-           id= "drinkInfo"
-           
-            :to="{
-              name: 'Detailed',
-              params: { id: item.idDrink },
-            }"
-          >
-          <img
-            :src="item.strDrinkThumb"
-            class="card-img-top"
-            alt=""
-            width="150"
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ item.strDrink }}</h5>
-          </div>
-          </router-link>
-        </div>
-      </div>
-    </div>
+    <h2>{{ route }}</h2>
+    <Cards :array="cocktails" />
   </div>
 </template>
 <script>
 import axios from "axios";
-
+import Cards from "@/components/Cards.vue";
 export default {
   name: "Category",
-
+  components: {
+    Cards,
+  },
   data() {
     return {
       cocktails: [],
@@ -57,23 +37,20 @@ export default {
         })
         .catch((e) => console.log(e));
     },
-    
   },
-  computed:{
-    forzar(){
-      console.log('click')
+  computed: {
+    forzar() {
+      console.log("click");
       this.getDrinks();
-    }
+    },
   },
   watch: {
-        '$route' (to, from) {
-
-          if (from.params.selected !== to.params.selected) {
-
-            return this.getDrinks()
-
-          }
-        }
+    $route(to, from) {
+      if (from.params.selected !== to.params.selected) {
+        this.route= this.$route.params.selected
+        return this.getDrinks();
       }
+    },
+  },
 };
 </script>

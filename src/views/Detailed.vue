@@ -15,9 +15,9 @@
           <li style="font-size: 1.2em;">{{ item.measure }} {{ item.ingredient }}</li>
         </ul>
       
-      <div class="pt-4">
+      <div class="pt-4 mb-5">
         <h3 class="mb-4">Instructions</h3>
-        <p style="margin-left: 10%; margin-right: 10% " class="fw-bold">{{ details.strInstructions }}</p>
+        <p style="margin-left: 10%; margin-right: 10% " class="fw-bold fs-5">{{ details.strInstructions }}</p>
       </div>     
     </div>
   </div>
@@ -99,3 +99,6 @@ export default {
 };
 </script>
 
+<style scoped>
+
+</style>

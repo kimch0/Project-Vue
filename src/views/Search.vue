@@ -1,16 +1,16 @@
 <template>
   <div class="pt-4">
     <h2>Results of: {{ route }}</h2>
-    <Card :array="drinks"/>
+    <Cards :array="drinks"/>
   </div>
 </template>
 <script>
 import axios from "axios";
-import Card from "@/components/Cards.vue";
+import Cards from "@/components/Cards.vue";
 export default {
   name: "Search",
   components: {
-    Card,
+    Cards,
   },
   data() {
     return {
@@ -33,16 +33,13 @@ export default {
           aux = response.data;
           let array = aux.drinks;
           this.drinks = array;
-          console.log(array);
         })
         .catch((e) => console.log(e));
     },
   },
   watch: {
         '$route' (to, from) {
-
           if (from.params.searching !== to.params.searching) {
-
             this.route = this.$route.params.searching
             this.getSearch();
           }

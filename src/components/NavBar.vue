@@ -2,9 +2,15 @@
   <div>
     <nav class="navbar">
       <div class="container-fluid" style="background-color: #faffd8">
-        <a class="navbar-brand" href="/">
+        <!-- <a class="navbar-brand" href="/"> -->
+        <router-link
+          :to="{
+            name: 'Home',
+          }"
+        >
           <img src="@/assets/cocktailsIcon.png" alt="" width="35" height="50" />
-        </a>
+        </router-link>
+
         <ul class="nav w-50 d-flex flex-nowrap justify-content-evenly">
           <li class="nav-item dropdown ps-5">
             <a
@@ -92,11 +98,12 @@
             </ul>
           </li>
           <li class="nav-item">
-            <router-link 
-            class="nav-link"
-            :to="{
-                    name: 'About'
-                  }">
+            <router-link
+              class="nav-link"
+              :to="{
+                name: 'About',
+              }"
+            >
               About
             </router-link>
           </li>
@@ -178,7 +185,6 @@ export default {
       if (this.keyboard != "") {
         this.$router.push("/search/" + this.keyboard);
       }
-      console.log(this.keyboard);
       this.keyboard = "";
     },
   },
