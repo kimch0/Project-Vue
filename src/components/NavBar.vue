@@ -229,7 +229,9 @@ export default {
   form{
     padding-left: 0%!important;
     }
-
-  
+  a.dropdown-item{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
 }
 </style>

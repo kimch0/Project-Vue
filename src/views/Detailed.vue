@@ -1,10 +1,10 @@
 <template>
   <div class="d-flex pt-5">
-    <div class="w-25">
+    <div class="w-25 width100media">
       <img :src="details.strDrinkThumb" class="img-thumbnail" alt="..." />
       <h3 class="pt-3" style="color: #3e4036">{{ details.strDrink }}</h3>
     </div>
-    <div class="w-75 ps-5 pe-5">
+    <div class="w-75 ps-5 pe-5 width100media">
       <div>
         <h3 class="mb-4">Ingredients</h3>
         <ul
@@ -17,9 +17,9 @@
           </li>
         </ul>
       </div>
-      <div class="pt-4 mb-5">
+      <div class="pt-4 mb-5 width100media">
         <h3 class="mb-4">Instructions</h3>
-        <p style="margin-left: 10%; margin-right: 10%" class="fw-bold fs-5">
+        <p style="margin-left: 10%; margin-right: 10%" class="fw-bold fs-5 margin0media">
           {{ details.strInstructions }}
         </p>
       </div>
@@ -104,4 +104,21 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 1198px) {
+  div.d-flex{
+    flex-direction: column;
+  }
+  .width100media{
+    width: 100%!important;
+    padding-left: 0%!important;
+    padding-right: 0%!important;
+  }
+  .margin0media{
+    margin-left: 0%!important;
+    margin-right: 0%!important;
+  }
+  h3.pt-3{
+    margin-bottom: 15%;
+  }
+}
 </style>
