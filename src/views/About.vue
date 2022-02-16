@@ -20,7 +20,7 @@
       <div class="mt-5">
         <h3>Extra</h3>
         <p>
-          The front-end is not my strenght, I apologize for the poor desing. <br>
+          The front-end is not my strenght, I apologize for the poor design. <br>
           
         </p>
       </div>
