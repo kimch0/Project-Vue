@@ -21,7 +21,7 @@
         <h3>Extra</h3>
         <p>
           The front-end is not my strenght, I apologize for the poor desing. <br>
-          The page is not responsive yet.
+          
         </p>
       </div>
     </div>
